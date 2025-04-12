@@ -9,8 +9,10 @@ packages:
 - docker
 
 git setup:
-git local config
+git global config
+git config --global credential.helper store
 
+git local config
 git config user.name "maxcoga"
 git config user.email "26971160+MaxCoGa@users.noreply.github.com"
 
