@@ -6,6 +6,7 @@ packages:
 - rust
 - vscodium
 - sunshine
+- docker
 
 git setup:
 git local config
