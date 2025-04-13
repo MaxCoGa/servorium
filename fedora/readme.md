@@ -7,6 +7,7 @@ packages:
 - vscodium
 - sunshine
 - docker
+- tailscale
 
 git setup:
 git global config
@@ -27,3 +28,13 @@ sudo dnf install Sunshine
 vscodium:
 https://flathub.org/apps/com.vscodium.codium
 flatpak install flathub com.vscodium.codium
+
+
+tailscale:
+https://tailscale.com/kb/1511/install-fedora-2
+
+sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+sudo dnf install tailscale
+sudo systemctl enable --now tailscaled
+sudo tailscale up
+tailscale ip -4
