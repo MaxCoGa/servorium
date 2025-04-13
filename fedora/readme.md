@@ -36,5 +36,6 @@ https://tailscale.com/kb/1511/install-fedora-2
 sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 sudo dnf install tailscale
 sudo systemctl enable --now tailscaled
-sudo tailscale up
-tailscale ip -4
+
+sudo tailscale up --auth-key=tskey-auth-AUTHKEY
+tailscale ip -4 
