@@ -39,3 +39,11 @@ sudo systemctl enable --now tailscaled
 
 sudo tailscale up --auth-key=tskey-auth-AUTHKEY
 tailscale ip -4 
+
+docker:
+https://docs.docker.com/engine/install/fedora/
+sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+auto:
+sudo systemctl enable --now docker
